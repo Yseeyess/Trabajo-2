@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Formulario</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/reset.css"> 
+        <link rel="stylesheet" href="css/estilos.css">
+    </head>
+
+    <body>
+
+        <div id="mensaje"></div>
+
+        <form id="formulario" method="post" action="#">
+            <h1>Formulario </h1>
+
+            <ul>
+                <li>
+                    <label for="nombre" class="datosPersonales">Nombre</label>
+                    <input type="text" id="nombre" maxlength="15" placeholder="Nombre" required="true" class="cuadroDatos">
+                </li>
+
+                <li>
+                    <label for="apellidos" class="datosPersonales">Apellidos</label>
+                    <input type="text" id="apellidos" maxlength="20" placeholder="Apellidos" required="true" class="cuadroDatos">
+                </li>
+
+                <li>
+                    <label for="rut" class="datosPersonales">RUT</label>
+                    <input type="text" id="rut" maxlength="10" placeholder="12345678-9" required="true" class="cuadroDatos">
+
+                    <p> <small id="smallRUT">RUT debe ingresarse sin puntos y con el digito verificador. Ej: 12345678-9.</small> </p>
+
+                </li>
+
+                <li>
+                    <label for="email" class="datosPersonales">Correo Electrónico</label>
+                    <input type="email" id="email" maxlength="20" placeholder="@correo.com" required="true" class="cuadroDatos">
+
+                        <p> <small id="smallEmail">Nosotros no compartiremos tu email con nadie más.</small> </p>
+                </li>
+
+                <li>
+                    <label for="telefono" class="datosPersonales">Teléfono móvil</label>
+                    <input type="number" id="telefono" maxlength="9" placeholder="123456789" class="cuadroDatos" required="true" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+                    
+                        <p> <small id="smallTelefono">Debe contener 9 digitos.</small> </p>
+                </li>
+
+
+                <li>
+                    <label class="datosPersonales">Seleccione uno o más lenguajes de programación de su interés:</label>
+                    <ul>
+                        <li class="lengProgr">
+                            <input type="checkbox" id="python" value="Python" class="checkboxs">
+                            <label for="python">Python</label>
+                        </li>
+
+                        <li class="lengProgr">
+                            <input type="checkbox" id="java" value="Java" class="checkboxs">
+                            <label for="java">Java</label>
+                        </li>
+
+                        <li class="lengProgr">
+                            <input type="checkbox" id="typeScript" value="TypeScript" class="checkboxs">
+                            <label for="typeScript">TypeScript</label>
+                        </li>
+
+                        <li class="lengProgr">
+                            <input type="checkbox" id="php" value="PHP" class="checkboxs">
+                            <label for="php">PHP</label>
+                        </li>
+
+                        <li class="lengProgr">
+                            <input type="checkbox" id="c" value="C#" class="checkboxs">
+                            <label for="c">C#</label>
+                        </li>
+
+                        <li class="lengProgr">
+                            <input type="checkbox" id="python" value="C++" class="checkboxs">
+                            <label for="c++">C++</label>
+                        </li>
+                    </ul>
+                </li>
+                
+
+                <li>
+                    <label class="datosPersonales">¿Cuál es su nivel de conocimiento en programación?</label>
+                    <input type="range"  id="conocProgr" min="0" max="10"> <span id="sliderNum"></span>
+                </li>
+
+
+                <li>
+                    <label class="datosPersonales">¿Cuantos años de experiencia laboral tiene?</label>
+                    <div id="idradio">
+                        <input type="radio" value="1" class="radios" name="cantAños" required="true">
+                        <label for="1año">1</label>
+                        
+                        <input type="radio" value="2" class="radios" name="cantAños">
+                        <label for="2año">2</label>
+                        
+                        <input type="radio" value="3" class="radios" name="cantAños">
+                        <label for="3año">3</label>
+                        
+                        <input type="radio" value="4" class="radios" name="cantAños">
+                        <label for="4año">4</label>
+                        
+                        <input type="radio" value="5" class="radios" name="cantAños">
+                        <label for="5año">5</label>
+                    </div>
+                </li>
+
+
+                <li>
+                    <label for="descripcion" class="datosPersonales">Descripción breve acerca de usted:</label>
+                    <textarea type="text" maxlength="800" rows="10" cols="100" id="descripcion" required="true"></textarea>
+                </li>
+
+                <div class="botones">
+                    <li>
+                        <button type="submit" id="enviar">Enviar Datos</button>
+                    </li>
+                    <li>
+                        <button type="button" onclick="limpiarDatos()" id="limpiar">Limpiar Todo</button>
+                    </li>
+                </div>
+            </ul>
+        </form>
+
+        <script src="js/inicio.js" async defer></script>
+    </body>
+</html>

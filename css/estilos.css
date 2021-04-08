@@ -1,0 +1,86 @@
+ul{
+    list-style-type:none;
+}
+
+h1{ /*Formulario*/
+    font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+
+    margin:20px 0px 30px 0px;         /*top: right: bottom: left;*/
+}
+
+form{
+	width: 75%;
+	margin: auto;
+	text-align: center;
+}
+
+.datosPersonales{
+    font-size: 25px;
+
+    text-align: left;
+    font-weight: bold;
+    margin:15px;
+    width:100%;
+    display:block;
+}
+
+.cuadroDatos{
+    width:550px;
+
+    height: 30px;
+    display:block;
+    margin-left:20px;
+    margin-right:0px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-bottom:5px;
+}
+
+small {
+    font-size: .7em;
+    text-align: left;
+    display:block;
+    margin-left:20px;
+    color:gray;
+}
+
+.lengProgr{
+    text-align:left;
+    margin: 20px 0px 20px 55px;     /*top: right: bottom: left;*/
+    font-size: 20px;
+}
+
+#conocProgr{
+    width: 60%;
+    margin:30px;
+}
+
+.radios{
+    margin-left:35px;
+    margin-bottom: 20px;
+}
+
+#enviar{
+    float:right;
+    padding : 5px 25px 5px 25px;	/*top: right: bottom: left;*/
+    color:black;
+    background-color: white;
+    border:1px solid black;
+    margin:5%;
+}
+
+#limpiar{
+    float:left;
+    padding : 5px 25px 5px 25px;	/*top: right: bottom: left;*/
+    color:black;
+    background-color: white;
+    border:1px solid black;
+    margin:5%;
+}
+
+#descripcion{
+    margin-top:25px;       /*top: right: bottom: left;*/
+    
+}
